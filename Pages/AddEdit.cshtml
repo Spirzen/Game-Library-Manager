@@ -1,0 +1,32 @@
+﻿@page
+@model GameLibraryManager.Pages.AddEditModel
+@{
+    ViewData["Title"] = Model.IsEdit ? "Редактировать игру" : "Добавить игру";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Game.Id" />
+    <div class="form-group">
+        <label asp-for="Game.Name"></label>
+        <input asp-for="Game.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Game.Genre"></label>
+        <input asp-for="Game.Genre" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Game.Year"></label>
+        <input asp-for="Game.Year" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Game.Developer"></label>
+        <input asp-for="Game.Developer" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Game.Platform"></label>
+        <input asp-for="Game.Platform" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>
